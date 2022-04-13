@@ -9,7 +9,7 @@ export const AuthenticatePage = () => {
       username: 'DavidTest3',
       email: 'davidtest3@gmail.com',
       password: 'qweQWE$12',
-      emoji: '🐆',
+      emoji: '🐆'
     });
   };
 

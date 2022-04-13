@@ -22,19 +22,15 @@ export type AuthContextType = {
 
 const initialState = {
   authenticated: false,
-  user: null,
+  user: null
 };
 
 export const AuthContext = createContext<AuthContextType>({
   ...initialState,
-  register: async () => {},
+  register: async () => {}
 });
 
-export const AuthContextProvider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [auth, setAuth] = useState<AuthContextState>(initialState);
 
   const register = async (params: RegisterParams) => {
@@ -48,9 +44,5 @@ export const AuthContextProvider = ({
       });
   };
 
-  return (
-    <AuthContext.Provider value={{ ...auth, register }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{ ...auth, register }}>{children}</AuthContext.Provider>;
 };

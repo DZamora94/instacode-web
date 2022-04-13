@@ -23,10 +23,14 @@
 
 ---
 
-- [] Prettier config
-- [] ESLint config
+- [x] Prettier config
+  - Create .prettierrc file
+- [-] ESLint config
+  - npx eslint --init
+  - npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 - [] Husky config
-- [] Jest config
+  - npm i -D husky lint-staged
+- [x] Jest config
 
 - [] Register refactor
 

@@ -5,7 +5,7 @@ import { AuthContext } from '../context/auth.context';
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { authenticated } = useContext(AuthContext);
 
-  return authenticated ? <>{children}</> : <Navigate to='/' />;
+  return authenticated ? <>{children}</> : <Navigate to="/" />;
 };
 
 export default ProtectedRoute;

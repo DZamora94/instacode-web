@@ -10,13 +10,10 @@ function App() {
       <AuthContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route
-              index
-              element={<AuthenticatePage></AuthenticatePage>}
-            ></Route>
-            <Route path='edit' element={<Navigate to='/' />}>
+            <Route index element={<AuthenticatePage></AuthenticatePage>}></Route>
+            <Route path="edit" element={<Navigate to="/" />}>
               <Route
-                path='snippet'
+                path="snippet"
                 element={
                   <ProtectedRoute>
                     <h1>Edit Snippet</h1>
@@ -24,7 +21,7 @@ function App() {
                 }
               ></Route>
               <Route
-                path='profile'
+                path="profile"
                 element={
                   <ProtectedRoute>
                     <h1>Edit Profile</h1>
@@ -33,14 +30,14 @@ function App() {
               ></Route>
             </Route>
             <Route
-              path='snippets'
+              path="snippets"
               element={
                 <ProtectedRoute>
                   <h1>Snippets</h1>
                 </ProtectedRoute>
               }
             ></Route>
-            <Route path='*' element={<h1>404</h1>}></Route>
+            <Route path="*" element={<h1>404</h1>}></Route>
           </Routes>
         </BrowserRouter>
       </AuthContextProvider>
