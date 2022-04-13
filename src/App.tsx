@@ -1,45 +1,51 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+import { AuthContextProvider } from './context/auth.context';
+import { AuthenticatePage } from './pages/Authenticate';
+import { Layout } from './ui/Layout';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <Layout>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              index
+              element={<AuthenticatePage></AuthenticatePage>}
+            ></Route>
+            <Route path='edit' element={<Navigate to='/' />}>
+              <Route
+                path='snippet'
+                element={
+                  <ProtectedRoute>
+                    <h1>Edit Snippet</h1>
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path='profile'
+                element={
+                  <ProtectedRoute>
+                    <h1>Edit Profile</h1>
+                  </ProtectedRoute>
+                }
+              ></Route>
+            </Route>
+            <Route
+              path='snippets'
+              element={
+                <ProtectedRoute>
+                  <h1>Snippets</h1>
+                </ProtectedRoute>
+              }
+            ></Route>
+            <Route path='*' element={<h1>404</h1>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthContextProvider>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
