@@ -25,19 +25,22 @@
 
 - [x] Prettier config
   - Create .prettierrc file
-- [-] ESLint config
+- [x] ESLint config
   - npx eslint --init
   - npm install --save-dev eslint-config-prettier eslint-plugin-prettier
-- [] Husky config
+- [x] Husky config
   - npm i -D husky lint-staged
 - [x] Jest config
 
 - [] Register refactor
 
-  - [] Create Authentication hook
-  - [] Create API Service
-  - [] Save user data in Context
+  - [-] Create Authentication hook
+  - [x] Create API Service
+  - [x] Save user data in Context
+  - [x] Save token in local storage
+  - [] Create getUserInfo function that gets th logged user info
 
 - [] Add forms in register and login pages
-- [] Register
-- [] Login
+  - [] Register
+  - [] Login
+  - [] Add route /codes protected
