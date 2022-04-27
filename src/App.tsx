@@ -1,7 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
-import { AuthContextProvider } from './context/auth.context';
+import { AuthContextProvider } from './context/auth';
 import { AuthenticatePage } from './pages/Authenticate';
+import StyleGuide from './pages/StyleGuide';
 import { Layout } from './ui/Layout';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 </ProtectedRoute>
               }
             ></Route>
+            <Route path="styleguide" element={<StyleGuide></StyleGuide>}></Route>
             <Route path="*" element={<h1>404</h1>}></Route>
           </Routes>
         </BrowserRouter>

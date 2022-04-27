@@ -32,15 +32,31 @@
   - npm i -D husky lint-staged
 - [x] Jest config
 
-- [] Register refactor
+- [x] Register refactor
 
   - [-] Create Authentication hook
   - [x] Create API Service
   - [x] Save user data in Context
   - [x] Save token in local storage
-  - [] Create getUserInfo function that gets th logged user info
+
+- [x] Create components for form
+
+  - [x] Input
+  - [x] Button
+  - [x] Error
+  - [x] Image Container
+  - [x] Image
+  - [x] Layout
+  - [x] Form
+  - [x] AuthenticateLayout
 
 - [] Add forms in register and login pages
-  - [] Register
-  - [] Login
+
+  - [x] Register
+  - [x] Login
   - [] Add route /codes protected
+
+- [] Load user data on app load
+- [] Create views for protected routes
+- [] Create code list components
+  - [] Create code snippet component
