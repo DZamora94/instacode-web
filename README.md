@@ -23,17 +23,48 @@
 
 ---
 
-- [] Prettier config
-- [] ESLint config
-- [] Husky config
-- [] Jest config
+- [x] Prettier config
+  - Create .prettierrc file
+- [x] ESLint config
+  - npx eslint --init
+  - npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+- [x] Husky config
+  - npm i -D husky lint-staged
+- [x] Jest config
 
-- [] Register refactor
+- [x] Register refactor
 
-  - [] Create Authentication hook
-  - [] Create API Service
-  - [] Save user data in Context
+  - [-] Create Authentication hook
+  - [x] Create API Service
+  - [x] Save user data in Context
+  - [x] Save token in local storage
 
-- [] Add forms in register and login pages
-- [] Register
-- [] Login
+- [x] Create components for form
+
+  - [x] Input
+  - [x] Button
+  - [x] Error
+  - [x] Image Container
+  - [x] Image
+  - [x] Layout
+  - [x] Form
+  - [x] AuthenticateLayout
+
+- [x] Add forms in register and login pages
+
+  - [x] Register
+  - [x] Login
+  - [x] Add route /codes protected
+
+- [x] Load user data on app load
+- [x] Create views for protected routes
+- [x] Create code list components
+
+  - [x] Create code snippet component
+
+- [] Snippets
+  - [] Connect API to get snippets
+  - [] Add pagination
+  - [] Form to create snippets
+  - [] Tags filter
+  - [] Connect API to get tags
