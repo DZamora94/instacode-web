@@ -1,14 +1,14 @@
 export type User = {
+  _id: string;
+  codes?: string[];
   email: string;
   emoji: string;
+  favCodes?: string[];
   password: string;
   username: string;
-  codes?: string[];
-  favCodes?: string[];
-  _id: string;
 };
 
 export type UserData = {
-  user: User | null;
   token: string | null;
+  user: User | null;
 };

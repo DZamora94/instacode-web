@@ -20,7 +20,7 @@ const authAxios = axios.create({
 
 export const register = async (params: RegisterParams): Promise<ResponsePayload<User> | ErrorPayload> =>
   apiTryCatchHandler(async () => {
-    const response = await authAxios.post<User>('user', params);
+    const response = await authAxios.post<User>('user/register', params);
     return {
       status: response.status,
       data: response.data

@@ -50,13 +50,21 @@
   - [x] Form
   - [x] AuthenticateLayout
 
-- [] Add forms in register and login pages
+- [x] Add forms in register and login pages
 
   - [x] Register
   - [x] Login
-  - [] Add route /codes protected
+  - [x] Add route /codes protected
 
-- [] Load user data on app load
-- [] Create views for protected routes
-- [] Create code list components
-  - [] Create code snippet component
+- [x] Load user data on app load
+- [x] Create views for protected routes
+- [x] Create code list components
+
+  - [x] Create code snippet component
+
+- [] Snippets
+  - [] Connect API to get snippets
+  - [] Add pagination
+  - [] Form to create snippets
+  - [] Tags filter
+  - [] Connect API to get tags

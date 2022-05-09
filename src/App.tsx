@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthContextProvider } from './context/auth';
-import { AuthenticatePage } from './pages/Authenticate';
+import AuthenticatePage from './pages/Authenticate';
 import StyleGuide from './pages/StyleGuide';
 import { Layout } from './ui/Layout';
 

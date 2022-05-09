@@ -8,7 +8,7 @@ import { Button } from '../ui/Button';
 import { AuthenticateLayout, FormWrapper, ToggleWrapper } from '../ui/layouts/AuthenticateLayout';
 import { setErrorToast } from '../utils/toast';
 
-const Authenticate = () => {
+const AuthenticatePage = () => {
   const [userEmail, setUserEmail] = useState('');
   const [formVariant, setFormVariant] = useState<'register' | 'login'>('login');
   const { authenticated, login, register } = useContext(AuthContext);
@@ -63,4 +63,4 @@ const Authenticate = () => {
   );
 };
 
-export default Authenticate;
+export default AuthenticatePage;
