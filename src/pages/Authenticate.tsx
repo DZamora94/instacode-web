@@ -6,7 +6,7 @@ import RegisterForm from '../components/RegisterForm';
 import { AuthContext } from '../context/auth';
 import { Button } from '../ui/Button';
 import { AuthenticateLayout, FormWrapper, ToggleWrapper } from '../ui/layouts/AuthenticateLayout';
-import { setErrorToast } from '../utils/toast';
+import { setErrorToast } from '../utils/toasts';
 
 const AuthenticatePage = () => {
   const [userEmail, setUserEmail] = useState('');

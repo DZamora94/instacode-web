@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { HTTPStatusCodes, ResponsePayload } from '../../types/request.types';
 import { Snippet, SnippetAuthor, SnippetFormValues } from '../../types/snippet.types';
 import { User } from '../../types/user.types';
-import { setErrorToast } from '../../utils/toast';
+import { setErrorToast } from '../../utils/toasts';
 import { create, edit, getPaginated, GetPaginatedPayload, loadOwnSnippets } from './api';
 
 export const handleGetOwnSnippets = async (
@@ -25,7 +25,7 @@ export const handleGetOwnSnippets = async (
     return true;
   }
 
-  setErrorToast('Ha ocurrido un error cargando tus snippets! 💀');
+  setErrorToast("There's been an error loading your snippets! 💀");
   return false;
 };
 
@@ -44,7 +44,7 @@ export const handleGetSnippets = async (
     return true;
   }
 
-  setErrorToast('Ha ocurrido un error cargando los snippets! 💀');
+  setErrorToast("There's been an error loading the snippets! 💀");
   return false;
 };
 
@@ -55,7 +55,7 @@ export const handleEditSnippet = async (axiosInstance: AxiosInstance, values: Sn
     return true;
   }
 
-  setErrorToast('Ha ocurrido un error editando el snippet! 💀');
+  setErrorToast("There's been an error editing the snippet! 💀");
   return false;
 };
 
@@ -69,6 +69,6 @@ export const handleCreateSnippet = async (
     return true;
   }
 
-  setErrorToast('Ha ocurrido un error creando el snippet! 💀');
+  setErrorToast("There's been an error creating the snippet! 💀");
   return false;
 };

@@ -19,15 +19,20 @@
 - [x] Create protected route component
 - [] Authentication with API
   - [x] Register
-  - [] Login
+  - [x] Login
 
 ---
 
 - [x] Prettier config
+  - npx i -D prettier
   - Create .prettierrc file
+  - Create .prettierignore file
 - [x] ESLint config
   - npx eslint --init
-  - npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+  - npm i --save-dev eslint-config-prettier eslint-plugin-prettier
+  - Add rules and extensions to .eslintrc
+  - Add detect React version in .eslintrc settings
+  - Create .eslintignore file
 - [x] Husky config
   - npm i -D husky lint-staged
 - [x] Jest config
@@ -63,8 +68,23 @@
   - [x] Create code snippet component
 
 - [] Snippets
-  - [] Connect API to get snippets
+
+  - [x] Connect API to get snippets
+  - [x] Form to create snippets
+
+- [] Refactor Forms
+
+  - [] Create generic components
+  - [] HOC so auth users do not land in Authenticate
+  - [] Control generic form errors
+
+- [] Snippets
+
   - [] Add pagination
-  - [] Form to create snippets
-  - [] Tags filter
-  - [] Connect API to get tags
+  - [] Language filter
+  - [] Add error toasts
+
+- [] General
+  - [] Create log out nav bar
+  - [] Deploy prod in Vercel
+  - [] General refactor

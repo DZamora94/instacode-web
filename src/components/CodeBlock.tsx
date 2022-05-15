@@ -7,7 +7,7 @@ export type Props = {
   language: string;
 };
 
-const defaultCode = `console.log('Hola MiniCoders! ✨⚡')`;
+const defaultCode = `console.log('Hi there! ✨⚡')`;
 
 const CodeBlock = ({ code, language }: Props) => {
   return (
