@@ -67,7 +67,7 @@
 
   - [x] Create code snippet component
 
-- [] Snippets
+- [x] Snippets
 
   - [x] Connect API to get snippets
   - [x] Form to create snippets
@@ -78,11 +78,11 @@
   - [] HOC so auth users do not land in Authenticate
   - [] Control generic form errors
 
-- [] Snippets
+- [x] Snippets
 
-  - [] Add pagination
-  - [] Language filter
-  - [] Add error toasts
+  - [x] Add pagination
+  - [x] Language filter
+  - [x] Add error toasts
 
 - [] General
   - [] Create log out nav bar

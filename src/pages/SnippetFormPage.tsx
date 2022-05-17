@@ -19,10 +19,10 @@ const SnippetFormPage = ({ isEdit = false }: Props) => {
   const submitNewSnippet = useCallback(async (values: SnippetParams) => {
     createSnippet(values).then((status: boolean) => {
       if (status) {
-        setSuccessToast('Snippet creado con éxito');
+        setSuccessToast('Snippet successfuly created');
         navigate('/snippets');
       } else {
-        setErrorToast('Ha ocurrido un error al crear el snippet');
+        setErrorToast('Error creating the snippet');
       }
     });
   }, []);
@@ -33,10 +33,10 @@ const SnippetFormPage = ({ isEdit = false }: Props) => {
       ...values
     } as Snippet).then((status: boolean) => {
       if (status) {
-        setSuccessToast('Snippet editado con éxito');
+        setSuccessToast('Snippet successfuly edited');
         navigate('/snippets?mode=owner');
       } else {
-        setErrorToast('Ha ocurrido un error al editar el snippet');
+        setErrorToast('Error editing the snippet');
       }
     });
   }, []);
@@ -47,7 +47,7 @@ const SnippetFormPage = ({ isEdit = false }: Props) => {
 
   return (
     <CommonLayout>
-      <h1>{isEdit ? 'Edita tu snippet' : 'Crea un nuevo snippet'}</h1>
+      <h1>{isEdit ? 'Edit your snippet' : 'Create a new snippet'}</h1>
 
       <SnippetForm
         isEdit={Boolean(editSnippetId && isEdit)}
